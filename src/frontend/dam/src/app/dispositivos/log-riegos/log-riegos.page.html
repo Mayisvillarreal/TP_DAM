@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Log Riegos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="riegos && riegos.length > 0; else noRiegos">
+    <ion-item *ngFor="let riego of riegos">
+      <ion-label>{{ riego.fecha | formatDate}}</ion-label>
+      <ion-label>{{ riego.apertura ? 'Abierta' : 'Cerrada' }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ng-template #noRiegos>
+    <ion-label>No se encontraron registros de riegos.</ion-label>
+  </ng-template>
+</ion-content>

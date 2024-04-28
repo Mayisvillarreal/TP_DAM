@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle Sensor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="highcharts" style="width:100%; height:300px;"></div>
+
+  <ion-col>
+    <ion-col>
+      <ion-button expand="full" (click)="toggleValve()">{{ valvulaAbierta ? 'Cerrar electroválvula' : 'Abrir electroválvula' }}</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" [routerLink]="['./mediciones']">Ver todas las mediciones</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" [routerLink]="['./logRiego']">Ver log de riegos</ion-button>
+    </ion-col>
+  </ion-col>
+</ion-content>

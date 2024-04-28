@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mediciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col><b>Fecha</b></ion-col>
+      <ion-col><b>Valor</b></ion-col>
+    </ion-row>
+    <ion-item *ngFor="let medicion of mediciones">
+      <ion-col>{{medicion.fecha | formatDate}}</ion-col>
+      <ion-col>{{medicion.valor}}</ion-col>
+    </ion-item>
+  </ion-grid>
+</ion-content>
